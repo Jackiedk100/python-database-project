@@ -12,3 +12,6 @@ DELETE FROM authors
 
 conn.commit()
 conn.close()
+
+
+
