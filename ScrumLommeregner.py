@@ -71,12 +71,15 @@ while True:
                 if operation == "1":
                     result = addition(num1, num2)
                     print(f"The result of {num1} + {num2} is: {result}")
+
                 elif operation == "2":
                     result = subtraction(num1, num2)
                     print(f"The result of {num1} - {num2} is: {result}")
+
                 elif operation == "3":
                     result = multiplication(num1, num2)
                     print(f"The result of {num1} * {num2} is: {result}")
+
                 elif operation == "4":
                     result = division(num1, num2)
                     print(f"The result of {num1} / {num2} is: {result}")
@@ -97,6 +100,7 @@ while True:
                     b = get_number("Enter the value for side b: ")
                     result = pythagoras(a, b)
                     print(f"The result of Pythagoras with sides {a} and {b} is: {result}")
+
                 elif operation == "2":
                     print("Type each number you want, followed by ENTER to find the average number")
                     print("Type c to calculate the average")
@@ -116,16 +120,19 @@ while True:
                                 print(numbers)
                             except ValueError:
                                 print("Invalid input. Please enter a number or c to calculate the average")
+
                 elif operation == "3":
                     a = get_number("Enter price of the merchandise: ")
                     b = get_number("Enter discount percentage: ")
                     result = discount(a, b)
                     print(f"The result of merchandise costing: {a} and a discount of {b}% it will cost: {result}")
+
                 elif operation == "4":
                     a = get_number("Enter price of the merchandise: ")
                     b = get_number("Enter VAT percentage: ")
                     result = vat(a, b)
                     print(f"The result of merchandise costing: {a} and VAT of {b}% the total cost is: {result}")
+                    
                 elif operation == "5":
                     a = get_number("Enter the number you wish to find a percentage of: ")
                     b = get_number("Enter the percentage you wish to find: ")
