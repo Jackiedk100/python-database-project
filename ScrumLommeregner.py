@@ -84,14 +84,13 @@ while True:
         if mode == "2":
             print("Hello User! I am an advanced calculator. I can perform the following operations:")
             print("[1] Pythagoras")
-            print("[2] Custom calculator")
-            print("[3] Average")
-            print("[4] Discount")
-            print("[5] VAT")
-            print("[6] Percentage")
-            operation = input("\nPlease select an operation by entering the corresponding number (1-6): ")
-            if operation not in ("1", "2", "3", "4", "5", "6"):
-                print("Invalid choice. Please enter a number between 1 and 6.")
+            print("[2] Average")
+            print("[3] Discount")
+            print("[4] VAT")
+            print("[5] Percentage")
+            operation = input("\nPlease select an operation by entering the corresponding number (1-5): ")
+            if operation not in ("1", "2", "3", "4", "5"):
+                print("Invalid choice. Please enter a number between 1 and 5.")
             else:
                 if operation == "1":
                     a = get_number("Enter the value for side a: ")
@@ -99,10 +98,6 @@ while True:
                     result = pythagoras(a, b)
                     print(f"The result of Pythagoras with sides {a} and {b} is: {result}")
                 elif operation == "2":
-                    result = input("Enter your custom mathematical expression: ")
-                    calc = eval(result)
-                    print(f"{result} = {calc}")
-                elif operation == "3":
                     print("Type each number you want, followed by ENTER to find the average number")
                     print("Type c to calculate the average")
                     numbers = []
@@ -121,17 +116,17 @@ while True:
                                 print(numbers)
                             except ValueError:
                                 print("Invalid input. Please enter a number or c to calculate the average")
-                elif operation == "4":
+                elif operation == "3":
                     a = get_number("Enter price of the merchandise: ")
                     b = get_number("Enter discount percentage: ")
                     result = discount(a, b)
                     print(f"The result of merchandise costing: {a} and a discount of {b}% it will cost: {result}")
-                elif operation == "5":
+                elif operation == "4":
                     a = get_number("Enter price of the merchandise: ")
                     b = get_number("Enter VAT percentage: ")
                     result = vat(a, b)
                     print(f"The result of merchandise costing: {a} and VAT of {b}% the total cost is: {result}")
-                elif operation == "6":
+                elif operation == "5":
                     a = get_number("Enter the number you wish to find a percentage of: ")
                     b = get_number("Enter the percentage you wish to find: ")
                     result = percentage(a, b)
