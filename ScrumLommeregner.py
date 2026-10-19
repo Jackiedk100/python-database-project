@@ -87,10 +87,11 @@ while True:
             print("[2] Average")
             print("[3] Discount")
             print("[4] VAT")
-            print("[5] Percentage")
-            operation = input("\nPlease select an operation by entering the corresponding number (1-5): ")
-            if operation not in ("1", "2", "3", "4", "5"):
-                print("Invalid choice. Please enter a number between 1 and 5.")
+            print("[5] Percentage of a number")
+            print("[6] Percentage increase/decrease of two numbers")
+            operation = input("\nPlease select an operation by entering the corresponding number (1-6): ")
+            if operation not in ("1", "2", "3", "4", "5", "6"):
+                print("Invalid choice. Please enter a number between 1 and 6.")
             else:
                 if operation == "1":
                     a = get_number("Enter the value for side a: ")
@@ -131,6 +132,14 @@ while True:
                     b = get_number("Enter the percentage you wish to find: ")
                     result = percentage(a, b)
                     print(f"{b}% of {a} is {result}")
+                elif operation == "6":
+                    a = get_number("Enter the original number: ")
+                    b = get_number("Enter the new number: ")
+                    if a == 0:
+                        print("Error: The original number cannot be zero for percentage increase/decrease calculation.")
+                    else:
+                        percentage_change = ((b - a) / a) * 100
+                        print(f"The percentage change from {a} to {b} is: {percentage_change}%")
         if mode == "3":
             break
 
